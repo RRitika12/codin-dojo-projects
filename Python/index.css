@@ -1,0 +1,75 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.freeppt7.com/uploads/180907/1-1PZH1140G43.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header img {
+    width: 55px;
+    display: inline-block;
+}
+
+.header {
+    text-align: center;
+    font-family: Courier New, monospace;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 55pt;
+    display: inline-block;
+}
+
+img {
+    width: 25px;
+}
+
+.content {
+    width: 350px;
+    /* background-image: linear-gradient(to top left, #0A81D1, #314CB6, #6461A0, #314CB6, #0A81D1); */
+    padding: 20px;
+    background-size: cover;
+    display: inline-block;
+    border-radius: 25px;
+    margin-left: 20px;
+    font-family: Courier New, monospace;
+}
+
+.content1 {
+    width: 350px;
+    /* background-image: linear-gradient(to top left, #0A81D1, #314CB6, #6461A0, #314CB6, #0A81D1); */
+    background-size: cover;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 20px;
+    margin-left: 380px;
+    font-family: Courier New, monospace;
+}
+
+form input {
+    -webkit-text-fill-color: black;
+}
+
+.footer {
+    text-align: center;
+    font-family: Bradley Hand, cursive;
+    padding: 30px;
+    margin-top: 101px;
+    background-image: url('');
+}
+
+.footer p {
+    display: inline-block;
+    margin: 0.6rem;
+
+}

@@ -1,0 +1,80 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.freeppt7.com/uploads/180907/1-1PZH1140G43.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header img {
+    width: 80px;
+    display: inline-block;
+}
+
+.main {
+    display: inline-block;
+    margin-left: 700px;
+    text-align: right;
+    padding: 10px;
+    font-family: Courier New, monospace;
+    border-radius: 20px;
+}
+
+.main h4 {
+    display: inline-block;
+    margin: 0.6rem;
+}
+
+.main form {
+    display: inline-block;
+}
+
+.header {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+}
+
+
+.container {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Courier New, monospace;
+}
+
+.container textarea {
+    border: 0;
+    border-bottom: 1px solid black;
+    background-color:rgba(0, 0, 0, 0);
+    outline:none;
+    transition:height 1s;
+    -webkit-transition:height 1s;
+}
+
+
+.container img {
+    width: 30px;
+}
+
+
+.footer {
+    text-align: center;
+    font-family: Bradley Hand, cursive;
+    padding: 30px;
+    margin-top: 220px;
+}
+
+.footer p {
+    display: inline-block;
+    margin: 0.6rem;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'application/css/dashboard.css' %}">   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="header">
+        <a href="/dashboard"><h4>Home</h4></a>
+        <a href="/posts/new"><h4>Create a task!</h4></a>
+        <div class="main">
+            <h4>Welcome, {{ user.first_name }} {{ user.last_name }}! </h4>
+            <form action='/logout' method='post'>
+                {% csrf_token %}
+                <input <button type="submit" class="btn btn-primary" type='submit' value='Log Out'>
+            </form>
+        </div>
+    </div>
+
+    <div class="content1">
+        
+    </div>
+
+    <div class="content">
+        <div class="text">
+            {% for post in all_posts %}
+                {%if user != post.uploader %}
+                {%else%}
+                <p>{{ post.description }}</p>
+                    <a href="/posts/{{post.id}}/edit"><img src="https://img.icons8.com/cotton/2x/edit.png" alt=""></a>
+                    <a href="{% url 'delete_post' id=post.id%}"><img src="https://cdn3.iconfinder.com/data/icons/ui-essential-elements/110/DeleteDustbin-512.png" alt=""></a>
+                    <hr>
+                {% endif%}
+            {% endfor %}
+        </div>
+    </div> 
+
+    <div class="footer">
+        <p>HOME</p>
+        <p>ABOUT</p>
+        <p>©COPYRIGHT</p>
+        <p>FAQ</p>
+        <p>CONTACT US</p>
+    </div>
+
+
+</body>
+</html>

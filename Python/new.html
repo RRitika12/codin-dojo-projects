@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'application/css/new.css' %}">   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="header">
+        
+        <div class="main">
+                <a href="/dashboard"><h4>Home</h4></a>
+            <h4>Welcome, {{ user.first_name }} {{ user.last_name }}! </h4>
+            <form action='/logout' method='post'>
+                {% csrf_token %}
+                <input <button type="submit" class="btn btn-primary" type='submit' value='Log Out'>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <form action="/addpost" method="POST">
+            {% csrf_token %}
+            <br><textarea name="description" id="" cols="100" rows="10"></textarea><br>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>HOME</p>
+        <p>ABOUT</p>
+        <p>©COPYRIGHT</p>
+        <p>FAQ</p>
+        <p>CONTACT US</p>
+    </div>
+
+</body>
+</html>
